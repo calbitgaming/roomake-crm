@@ -5,10 +5,8 @@ body {
   margin: 0;
   padding: 20px;
 }
-h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-  margin-top: 30px;
+h1 {
+  margin: 0;
 }
 .form-group {
   display: flex;
@@ -29,19 +27,16 @@ h2 {
 }
 .two-cols {
   display: flex;
-  gap: 20px;
-}
-.two-cols > div {
-  flex: 1;
+  justify-content: space-between;
 }
 .logo {
   text-align: right;
 }
 .submit-btn {
-  background-color: #f0c040;
+  background-color: #28a745;
+  color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 20px;
 }

@@ -1,3 +1,4 @@
+
 document.querySelector(".submit-btn").addEventListener("click", async () => {
   const data = {
     client_name: document.querySelector("[name='client_name']").value,
@@ -21,4 +22,9 @@ document.querySelector(".submit-btn").addEventListener("click", async () => {
     console.error(err);
     alert("Сетевая ошибка");
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("today-date").textContent = today;
 });

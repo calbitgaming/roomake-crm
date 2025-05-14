@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roomake CRM - Заявка</title>
+  <title>Roomake CRM</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="two-cols">
-    <div><h1>Ввод информации о Клиенте</h1></div>
+    <div><h1>Заявка</h1></div>
     <div class="logo">
-      <img src="logo_placeholder.png" alt="ROOMAKE" height="80">
-      <div>03.05.2025</div>
+      <img src="logo_placeholder.png" alt="ROOMAKE" height="60">
+      <div>Дата: <span id="today-date"></span></div>
     </div>
   </div>
 
@@ -22,7 +22,6 @@
     <input type="text" name="contact">
   </div>
 
-  <h2>Ввод информации о Заявке</h2>
   <div class="form-group">
     <label>Менеджер:</label>
     <select name="manager">
@@ -31,46 +30,12 @@
     </select>
     <label>Регион заявки:</label>
     <input type="text" name="region">
-    <label>Дата заявки:</label>
-    <input type="date" name="date" value="2025-05-03">
-  </div>
-  <div class="form-group">
     <label>Комментарии:</label>
     <textarea name="comment"></textarea>
   </div>
 
   <button class="submit-btn">Сохранить</button>
 
-  <script>
-document.querySelector(".submit-btn").addEventListener("click", async () => {
-  const data = {
-    client_name: document.querySelector("[name='client_name']").value,
-    contact: document.querySelector("[name='contact']").value,
-    manager: document.querySelector("[name='manager']").value,
-    region: document.querySelector("[name='region']").value,
-    comment: document.querySelector("[name='comment']").value
-  };
-
-  const response = await fetch("https://script.google.com/macros/s/AKfycbzTrY1MUOgE4tBUBMlkb-5cyysCSqXrmtlPriffgGg5Ro9UEpWzldwAD0X2UXZnhdZ_/exec", {
-    const params = new URLSearchParams({
-  client_name: 'Иван',
-  contact: '8911',
-  manager: 'М1',
-  region: 'Москва',
-  comment: 'Тест'
-});
-
-fetch("https://script.google.com/macros/s/AKfycbxbW1Xsm8ZqYc-tifOO-Xmg_LXC_To6CfaY2DopJQYufGN9pTo0LKMPNRXrgRIXW-sV/exec?" + params.toString())
-  .then(r => r.text())
-  .then(console.log);
-  });
-
-  if (response.ok) {
-    alert("Заявка отправлена!");
-  } else {
-    alert("Ошибка отправки");
-  }
-});
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
