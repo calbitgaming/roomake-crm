@@ -1,4 +1,3 @@
-
 document.querySelector(".submit-btn").addEventListener("click", async () => {
   const data = {
     client_name: document.querySelector("[name='client_name']").value,
@@ -9,20 +8,17 @@ document.querySelector(".submit-btn").addEventListener("click", async () => {
   };
 
   const params = new URLSearchParams(data);
-  const url = "https://script.google.com/macros/s/AKfycbwe_Z7fN9PLGtIDNwO-QUX6XGVxuSZ_cVanvu12XaW70vGqKYpYX_2tQpiYHCmsNpN5/exec?" + params.toString();
+  const url = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec?" + params.toString();
 
-  const response = await fetch(url);
-  if (response.ok) {
-    alert("Заявка отправлена!");
-  } else {
-    alert("Ошибка отправки: " + response.status);
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      alert("Заявка отправлена!");
+    } else {
+      alert("Ошибка: " + response.status);
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Сетевая ошибка");
   }
-  });
-  fetch(url, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
+});
