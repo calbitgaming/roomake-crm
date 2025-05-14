@@ -8,7 +8,7 @@ document.querySelector(".submit-btn").addEventListener("click", async () => {
   };
 
   const params = new URLSearchParams(data);
-  const url = "https://script.google.com/macros/s/AKfycbxbW1Xsm8ZqYc-tifOO-Xmg_LXC_To6CfaY2DopJQYufGN9pTo0LKMPNRXrgRIXW-sV/exec?" + params.toString();
+  const url = "https://script.google.com/macros/s/AKfycbzTrY1MUOgE4tBUBMlkb-5cyysCSqXrmtlPriffgGg5Ro9UEpWzldwAD0X2UXZnhdZ_/exec?" + params.toString();
 
   try {
     const response = await fetch(url);
