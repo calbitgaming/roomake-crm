@@ -17,4 +17,12 @@ document.querySelector(".submit-btn").addEventListener("click", async () => {
   } else {
     alert("Ошибка отправки: " + response.status);
   }
-});
+  });
+  fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
