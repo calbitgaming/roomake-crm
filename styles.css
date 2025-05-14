@@ -1,0 +1,47 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+}
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.form-group label {
+  width: 200px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  flex: 1;
+  padding: 6px;
+  font-size: 14px;
+}
+.two-cols {
+  display: flex;
+  gap: 20px;
+}
+.two-cols > div {
+  flex: 1;
+}
+.logo {
+  text-align: right;
+}
+.submit-btn {
+  background-color: #f0c040;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
