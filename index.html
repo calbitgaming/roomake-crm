@@ -51,7 +51,7 @@ document.querySelector(".submit-btn").addEventListener("click", async () => {
     comment: document.querySelector("[name='comment']").value
   };
 
-  const response = await fetch("https://script.google.com/macros/s/AKfycbxbW1Xsm8ZqYc-tifOO-Xmg_LXC_To6CfaY2DopJQYufGN9pTo0LKMPNRXrgRIXW-sV/exec", {
+  const response = await fetch("https://script.google.com/macros/s/AKfycbzTrY1MUOgE4tBUBMlkb-5cyysCSqXrmtlPriffgGg5Ro9UEpWzldwAD0X2UXZnhdZ_/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json" }
